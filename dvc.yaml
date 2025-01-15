@@ -1,7 +1,11 @@
-params:
-- dvclive/params.yaml
-metrics:
-- dvclive/metrics.json
-plots:
-- dvclive/plots/metrics:
-    x: step
+stages:
+  build_features:
+    cmd: python .\src\features\build_features.py
+    deps:
+    - .\data\raw\
+    - .\src\features\build_features.py
+  train_model:
+    cmd: python .\src\models\train_model.py .\data\processed\
+    deps:
+    - .\data\processed\
+    - .\src\models\train_model.py
