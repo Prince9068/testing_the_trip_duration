@@ -22,7 +22,7 @@ class PredictionInput(BaseModel):
 
 
 # Load the pre-trained RandomForest model
-model_path = 'D:/New folder/dvc-exp/models/model.joblib'
+model_path = 'D:/testing-project-folder/testing_the_trip_duration/models/model.joblib'
 if os.path.exists(model_path):
     # Load the model
     model = joblib.load(model_path)
