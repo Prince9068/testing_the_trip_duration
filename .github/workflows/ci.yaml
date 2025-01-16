@@ -41,6 +41,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
+      - name: Debug Workflow
+        run: 
+              echo "Current Directory:"
+              pwd
+              echo "Files in Directory:"
+              ls -la
+
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
@@ -69,14 +76,6 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
-
-      - name: Debug Workflow
-        run: 
-              echo "Current Directory:"
-              pwd
-              echo "Files in Directory:"
-              ls -la
-
 
       - name: Login to Amazon ECR
         id: login-ecr
