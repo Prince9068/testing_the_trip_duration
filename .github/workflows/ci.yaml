@@ -25,9 +25,7 @@ jobs:
     name: Push to ECR
     needs: integration
     runs-on: ubuntu-latest
-    env:
-      AWS_REGION: eu-north-1
-
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3

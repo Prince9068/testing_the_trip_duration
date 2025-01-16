@@ -4,7 +4,7 @@ from botocore.exceptions import NoCredentialsError
 
 def upload_to_s3(local_file_path, bucket_name, s3_file_path):
     # Create an S3 client
-    s3 = boto3.client('s3')
+    s3 = boto3.client('s3', region_name='ap-south-1')
 
     try:
         # Upload the file
