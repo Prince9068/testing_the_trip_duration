@@ -26,8 +26,8 @@ jobs:
     needs: integration
     runs-on: ubuntu-latest
     env:
-      AWS_REGION: ap-south-2
-      
+      AWS_REGION: ap-south-1
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
